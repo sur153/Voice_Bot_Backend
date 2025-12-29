@@ -1,0 +1,41 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+
+# Python dependencies
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.Venv/
+*.env
+
+# Logs
+*.log
+*.out
+*.err
+
+# IDE settings
+.vscode/
+.idea/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+*.egg
+*.manifest
+*.spec
+
+# Docker
+*.tar
+*.pid
+*.sock
