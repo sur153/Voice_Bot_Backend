@@ -12,6 +12,7 @@ import os
 import time
 from pathlib import Path
 from typing import Any, Dict, List, cast
+from flask_cors import CORS  # pyright: ignore[reportMissingTypeStubs]
 
 import simple_websocket.ws  # pyright: ignore[reportMissingTypeStubs]
 from flask import Flask, jsonify, request, send_from_directory
@@ -52,6 +53,7 @@ logger = logging.getLogger(__name__)
 
 # Initialize Flask application
 app = Flask(__name__, static_folder=STATIC_FOLDER, static_url_path=STATIC_URL_PATH)
+CORS(app)
 sock: Any = Sock(app)  # type: ignore[reportUnknownMemberType]
 
 # Initialize managers and analyzers
